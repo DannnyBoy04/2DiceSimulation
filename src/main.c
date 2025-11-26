@@ -42,11 +42,7 @@ void rollDice() {
 // Function to print the counts of all of the sums in `sumCounts`.
 void printSums(FILE *ostream) {
   for (size_t i = 0; i < 11; i++) {
-    fprintf(ostream, "%2zu: %zu", i + 2, sumCounts[i]);
-    // Skip the last newline.
-    if (i < 10) {
-      fprintf(ostream, "\n");
-    }
+    fprintf(ostream, "%2zu: %zu\n", i + 2, sumCounts[i]);
   }
 }
 
@@ -73,7 +69,7 @@ int main(int argc, char *argv[]) {
     break;
   }
 
-  // If there is an ouput file, set the output stream to it.
+  // If there is an output file, set the output stream to it.
   // Otherwise, the output stream is stdout (the terminal).
   if (ofile) {
     ostream = fopen(ofile, "w");
