@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug",
+            "program": "${workspaceFolder}/dice.exe",
+            "args": [
+                "${input:count}",
+                "${input:output-file}",
+            ],
+            "preLaunchTask": "${defaultBuildTask}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "count",
+            "type": "promptString",
+            "description": "Enter the roll count."
+        },
+        {
+            "id": "output-file",
+            "type": "promptString",
+            "description": "Enter the output file."
+        },
+    ]
+}
